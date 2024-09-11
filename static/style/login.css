@@ -1,0 +1,91 @@
+html{
+  width: 100vw;
+  height: 100vh;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Lato;
+  --Color-Darkblue: #55C1FF;
+  --Color-Bege: #102E4A;
+  --Color-Lightblue: #5887FF;
+  --Color-blue: #7DA0CA;
+  --Color-Branco: #fff;
+}
+.bg-azul{
+  background-color: var(--Color-Darkblue);
+}
+.container-login{
+  width: 100vw;
+  height: 100vh;
+}
+.form-box{
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+.content-box .form-box{
+  width: 80%;
+}
+.input-box{
+  margin-bottom: 68px;
+  margin-top: 20px;
+} 
+.content-box .form-box .input-box label{
+  font-size: 20px;
+  font-weight: 900;-
+  margin-left: 10px;
+  color: var(--Color-Bege);
+}
+.content-box .form-box .input-box input{
+  width: 100%;
+  padding: 10px;
+  color: var(--Color-Bege);
+  background-color: var(--Color-Darkblue);
+  border-radius: 30px;
+  border-color: var(--Color-Bege);
+}
+.content-box .form-box .input-box input[type=submit]{
+  background: var(--Color-Bege);
+  color: var(--Color-Darkblue);
+  border: none;
+  margin-top: 50px;
+  width: 228px;
+  font-size: 20px;
+  transition: 0.5s;
+  font-weight: 700;
+}
+.content-box .form-box .input-box input[type=submit]:hover{
+  background: var(--Color-Lightblue);
+}
+.container-login .input-box .cadastre-se{
+  background: var(--Color-Darkblue);
+  color: var(--Color-Bege);
+  border: none;
+  width: 228px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: 0.5s;
+  padding: 10px;
+}
+.container-login .input-box .cadastre-se:hover{
+  background: var(--Color-Lightblue);
+  color: var(--Color-Darkblue);
+}
+.content-box .form-box .remember{
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: var(--Color-Bege);
+  font-size: 18px;
+  font-weight: 300;
+}
+.content-box .form-box .remember a{
+  text-decoration: none;
+  color: var(--Color-Bege);
+}
+.content-box .form-box .remember a:hover{
+  color: var(--Color-Lightblue);
+}

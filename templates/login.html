@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/cadastro.css')}}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class=''>
+  <main class ='d-flex align-items-center justify-content-evenly'>
+    
+    <section class="container-login "> 
+      <img src="{{url_for('static', filename = 'imgs/logo.svg')}}" alt="">
+    </section>
+
+    <section class="">
+        <div class="">
+          <h1>Entrar</h1>
+          </div>
+          <form action="{{url_for('autenticar')}}" method="post" >
+            <div class="mb-3 row">
+              <div class="col">
+                <label for="primeiro_nome" class="form-label" >Primeiro nome</label>
+                <input type="text" class="form-control text-bg-light" aria-label="First name">
+              </div>
+              <div class="col">
+                <label for="ultimo_nome" class="form-label" >Último nome</label>
+                <input type="text" class="form-control text-bg-light" aria-label="Last name">
+              </div>
+            </div>
+              
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control text-bg-light"  id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+              <label for="senha" class="form-label">Senha</label>
+              <input type="password" name = 'senha' class="form-control text-bg-light" id="senha">
+            </div>
+            <div class="mb-3">
+              <label for="confirmar_senha" class="form-label">Confirmar Senha</label>
+              <input type="password" name = 'confirmar_senha' class="form-control text-bg-light" id="confirmar_senha">
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Default checkbox
+              </label>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="submit">Cadastrar</button>
+            </div>
+          </form>
+        
+    </section>
+    
+
+
+
+
+
+    
+    <!--<div>  
+      <div class="form-box">
+        <form action="{{url_for('autenticar')}}" method="post" >
+          <div class="input-box">
+            <label>Nome</label>
+            <input type="text" name='nome' placeholder="nome" required>
+          </div>
+          <div class="input-box">
+            <label>Email</label>
+            <input type="email" name='email' placeholder="@email.com" required>
+          </div>
+
+          <div class="input-box">
+            <label>Senha</label>
+            <input type="password" name = 'senha' placeholder="senha" required>
+          </div>
+          <div class="input-box">
+            <label>Confirmar Senha</label>
+            <input type="password" name = 'confirmar_senha' placeholder="Digite a sua senha novamente" required>
+          </div>
+
+          <div class="input-box d-flex justify-content-center">
+            <input type="submit" value="Cadastrar">
+          </div>
+          
+
+        </form>
+      </div>
+    </div> -->
+  </main>
+</body>
+</html>
