@@ -16,7 +16,9 @@ def usuario_cadastro():
     return render_template('usuario_cadastro.html')
   else:
 
-    nome = request.form.get('nome')
+    primeiro_nome = request.form.get('primeiro_nome')
+    ultimo_nome = request.form.get('ultimo_nome')
+    nome = primeiro_nome+ " " + ultimo_nome
     email = request.form.get('email')
     senha = request.form.get('senha')
     csenha = request.form.get('csenha')
@@ -30,6 +32,8 @@ def usuario_cadastro():
       usuario = Usuario(nome,  email, hashed_senha)
       db.session.add(usuario)
       db.session.commit()
+      login_user(usuario)
+
       return redirect(url_for('index'))
     else:
       return 'As senhas não coincidem'
@@ -44,14 +48,15 @@ def usuario_login():
   else:
         email = request.form.get('email')
         senha = request.form.get('senha')
-        usuario = Usuario.query.filter_by(email=email).first()
+        usuario = Usuario.query.filter_by(email=email, senha=senha).first()
 
         if usuario and bcrypt.check_password_hash(usuario.senha, senha):
+            login_user(usuario)
 
             # Senha válida, redirecione para a página inicial ou área restrita
             flash('Login bem-sucedido!', 'success')
 
-            return render_template('index.html')
+            return render_template('perfil.html')
         else:
 
             return jsonify({"message": "Credenciais inválidas"}), 401
@@ -122,11 +127,7 @@ def usuario_autenticar():
   else:
     return 'Credenciais inválidas'
     
-@bp_usuarios.route('/')
-def usuario_perfil():
-    nome = Usuario.nome
-    email = Usuario.email
-    return render_template('perfil.html', nome = nome, email = email)
+
 
 @bp_usuarios.route('/logoff')
 def logoff():
