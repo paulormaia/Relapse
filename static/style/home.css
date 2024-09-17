@@ -1,6 +1,27 @@
+html{
+    width: 100vw;
+    height: 100vh;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .header{
-    max-width: 75%;
+    max-width: 55%;
+}
+.link{
+    text-decoration: none;
 }
 .section{
     background-color: #33b393;
+}
+p, h1{
+    margin-left: 150px;
+    max-width: 25%;
+}
+.button{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
 }

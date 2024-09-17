@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon"href="{{url_for('static', filename='imgs/Vector.svg')}}">
 </head>
 <body>
   <header class='header'>
@@ -20,17 +21,18 @@
 
     <img src="{{url_for('static', filename = 'imgs/logomini.svg')}}" alt="">
 
-    <h3>Agendar</h3>
-    <h3>Meus agendamentos</h3>
+    <a class="link" href="{{url_for('usuarios.usuario_cadastro')}}">Cadastro</a>  
+    <a class="link" href="{{url_for('usuarios.usuario_login')}}">Entrar</a>
+    <a class="link" href="{{url_for('perfil')}}">Perfil</a>
     </nav>
 
   </header>
   <section class="section">
     <p>Relapse</p>
     <h1>A sua saúde psicologica é a nossa prioridade.</h1>
-    <a href="{{url_for('usuarios.usuario_cadastro')}}">Cadastro</a>  
-    <a href="{{url_for('usuarios.usuario_login')}}">Entrar</a>
-    <a href="{{url_for('perfil')}}">Perfil</a>
+    <p>Consultar unidades disponiveis para o atendimento, informações de localização e contato das Clínicas.</p>
+    <a href="https://relapse.zohobookings.com/#/relapse"><button class='button'>Acesse Aqui</button></a>
+    
 
 
   </section>

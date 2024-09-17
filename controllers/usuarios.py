@@ -28,7 +28,7 @@ def usuario_cadastro():
 
 
 
-    if senha == csenha:
+    if senha == csenha:     
       usuario = Usuario(nome,  email, hashed_senha)
       db.session.add(usuario)
       db.session.commit()
